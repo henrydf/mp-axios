@@ -1,5 +1,5 @@
 {
-  "name": "mp-axios",
+  "name": "@henrydf/mp-axios",
   "version": "1.4.0",
   "description": "miniprogram version of axios",
   "main": "index.js",
