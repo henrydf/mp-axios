@@ -1,0 +1,31 @@
+{
+  "name": "mp-axios",
+  "version": "1.4.0",
+  "description": "miniprogram version of axios",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs",
+    "postinstall": "patch-package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrydf/mp-axios.git"
+  },
+  "author": "Henry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henrydf/mp-axios/issues"
+  },
+  "homepage": "https://github.com/henrydf/mp-axios#readme",
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "axios": "^1.4.0",
+    "patch-package": "^8.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "rollup": "^3.29.2"
+  }
+}
