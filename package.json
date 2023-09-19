@@ -3,6 +3,10 @@
   "version": "1.4.1",
   "description": "miniprogram version of axios",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "package.json"
+  ],
   "scripts": {
     "build": "rollup -c rollup.config.mjs",
     "postinstall": "patch-package"
