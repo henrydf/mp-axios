@@ -3,8 +3,10 @@
   "version": "1.4.2",
   "description": "miniprogram version of axios",
   "main": "index.js",
+  "types": "index.d.ts",
   "files": [
     "index.js",
+    "index.d.ts",
     "package.json"
   ],
   "scripts": {
@@ -28,6 +30,7 @@
     "abort-controller": "3.0.0",
     "axios": "1.4.0",
     "patch-package": "^8.0.0",
-    "rollup": "^3.29.2"
+    "rollup": "^3.29.2",
+    "rollup-plugin-copy": "^3.5.0"
   }
 }
