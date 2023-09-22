@@ -138,7 +138,7 @@ export default function (config) {
       return;
     }
 
-    const encoding = config.responseEncoding ?? 'utf8';
+    const encoding = config.responseEncoding == null ? 'utf8' : config.responseEncoding;
 
     request = wx.request({
       url: buildURL(fullPath, config.params, config.paramsSerializer),

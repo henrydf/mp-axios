@@ -14,6 +14,8 @@ export default {
     copy({
       targets: [
         { src: 'node_modules/axios/index.d.ts', dest: '.' },
+        { src: 'node_modules/axios/lib/adapters/mp-xhr.js', dest: '.' },
+        { src: 'node_modules/axios/lib/adapters/xhr.js', dest: '.' },
       ],
     }),
     json(),
