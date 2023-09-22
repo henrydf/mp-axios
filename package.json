@@ -1,6 +1,6 @@
 {
   "name": "@henrydf/mp-axios",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "miniprogram version of axios",
   "main": "index.js",
   "types": "index.d.ts",
