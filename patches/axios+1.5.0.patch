@@ -22,10 +22,10 @@ index e31fca1..e91c4e8 100644
  utils.forEach(knownAdapters, (fn, value) => {
 diff --git a/node_modules/axios/lib/adapters/mp-xhr.js b/node_modules/axios/lib/adapters/mp-xhr.js
 new file mode 100644
-index 0000000..c29af2d
+index 0000000..b731d53
 --- /dev/null
 +++ b/node_modules/axios/lib/adapters/mp-xhr.js
-@@ -0,0 +1,158 @@
+@@ -0,0 +1,161 @@
 +'use strict';
 +
 +import utils from './../utils.js';
@@ -166,15 +166,18 @@ index 0000000..c29af2d
 +      return;
 +    }
 +
++    const encoding = config.responseEncoding ?? 'utf8';
++
 +    request = wx.request({
 +      url: buildURL(fullPath, config.params, config.paramsSerializer),
 +      enableHttp2: true,
-+      // dataType: 'arraybuffer',
-+      responseType,
++      dataType: config.responseType,
++      responseType: encoding === 'utf8' ? 'text' : 'arraybuffer',
 +      method: config.method,
 +      data: config.data,
 +      headers: requestHeaders.toJSON(),
 +      timeout: config.timeout,
++      ...config.wx,
 +      success({data, statusCode: status, header: headers}) {
 +        onloadend(data, status, headers);
 +      },
